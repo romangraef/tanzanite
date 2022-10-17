@@ -388,7 +388,7 @@ export class TanzaniteClient<Ready extends boolean = boolean> extends AkairoClie
 	public async init() {
 		if (parseInt(process.versions.node.split('.')[0]) < 18) {
 			void (await this.console.error('version', `Please use node <<v18.x.x>> or greater, not <<${process.version}>>.`, false));
-			process.exit(2);
+			// process.exit(2);
 		}
 
 		this.setMaxListeners(20);
